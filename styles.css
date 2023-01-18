@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border: 0;
+}
+
+body {
+    background: rgb(224, 218, 218);
+    font-family: Roboto;
+}
+
+/*
+    ----------------------------------------------------------------------------------
+                                    CARD STYLES
+    ----------------------------------------------------------------------------------
+*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+}
+
+.card-container {
+    background-color: white;
+    flex: 0 0 26%;
+    max-width: 26%;
+    height: 212px;
+    margin: 12px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.info {
+    display: flex;
+}
+
+.image {
+    margin-right: auto;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.name-location {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 18px;
+    box-sizing: border-box;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.location i {
+    font-size: 1.1em;
+}
+
+.location span {
+    font-size: .9em;
+}
+
+.quote-marks {
+    margin-left: auto;
+}
+
+.icon-size {
+    font-size: 2em;
+}
+
+.desc {
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    margin: 18px 0;
+    font-size: .9em;
+    line-height:1.5em;
+    min-height:4.5em;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.rating {
+    margin-top: auto;
+    font-size: .9em;
+}
+
+.rating-number {
+    font-weight: 700;
+}
+
+/*
+    ----------------------------------------------------------------------------------
+                                    DIALOG STYLES
+    ----------------------------------------------------------------------------------
+*/
+
+.btn-add {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(137, 34, 227);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-icon-atts {
+    font-size: 2.4em;
+    color: white;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .57);
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.dialog {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .25);
+    width: 45%;
+    padding: 20px;
+}
+
+.name-dialog, .location-dialog, .rating-dialog, .testimonial-dialog {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 8px;
+}
+
+.form-container input, textarea {
+    font-family: Roboto;
+}
+
+.form-container input {
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 2px;
+    padding: 10px 5px;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    padding: 10px 5px;
+}
+
+.form-container span {
+    margin-left: 8px;
+    color: red;
+}
+
+.btns-dialog {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-dialog-cancel {
+    outline: none;
+    padding: 3px 14px !important;
+    border: 1px solid rgb(137, 34, 227) !important;
+    background-color: white;
+    color: rgb(137, 34, 227);
+    border-radius: 4px !important;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.btn-dialog-submit {
+    outline: none;
+    border: 0 !important;
+    padding: 5px 14px !important;
+    background-color: rgb(137, 34, 227);
+    color: white;
+    border-radius: 4px !important;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.req {
+    color: red;
+    font-size: .8em;
+    margin-top: 3px;
+}
+
+.dialog > div:not(:last-child) {
+    margin-bottom: 22px;
+}
+
+/*
+    ----------------------------------------------------------------------------------
+                                    MEDIA QUERIES
+    ----------------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 1319px) {
+    .card-container {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .dialog {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .card-container {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+    .dialog {
+        width: 85%;
+    }
+}

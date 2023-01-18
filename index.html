@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+
+    <div class="container" id="container"></div>
+
+    <div class="btn-add" id="btn">
+        <i class="ph-plus-bold add-icon-atts"></i>
+    </div>
+
+    <div class="form-container" id="form-container">
+        <form action="" class="dialog" id="dialog">
+            <div class="name-dialog">
+                <label for="name">Name<span>*</span></label>
+                <input type="text" name="name" id="name">
+                <div class="req" id="req1">&nbsp;</div>
+            </div>
+            <div class="location-dialog">
+                <label for="loc">Location<span>*</span></label>
+                <input type="text" name="loc" id="loc">
+                <div class="req" id="req2">&nbsp;</div>
+            </div>
+            <div class="rating-dialog">
+                <label for="rat">Rating<span>*</span></label>
+                <input type="number" name="rat" id="rat" step=".1" max="5" min="0">
+                <div class="req" id="req3">&nbsp;</div>
+            </div>
+            <div class="testimonial-dialog">
+                <label for="msg">Testimonial<span>*</span></label>
+                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                <div class="req" id="req4">&nbsp;</div>
+            </div>
+            <div class="btns-dialog">
+                <input class="btn-dialog-cancel" type="reset" name="reset" id="reset" value="Cancel">
+                <input class="btn-dialog-submit" type="submit" name="submit" id="submit" value="Add">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
